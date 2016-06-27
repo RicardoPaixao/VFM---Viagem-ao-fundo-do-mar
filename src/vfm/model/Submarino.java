@@ -12,15 +12,15 @@ public class Submarino {
     private int x;
     private int y;
     private int z;
-    private String direcao;
+    private Direcao direcao;
 
-    private static final String NORTE = "NORTE";
-    private static final String SUL = "SUL";
-    private static final String LESTE = "LESTE";
-    private static final String OESTE = "OESTE";
+    enum Direcao {
+    NORTE , SUL , LESTE , OESTE;
+}
 
+    
     public Submarino() {
-        this.direcao = NORTE;
+        this.direcao = Direcao.NORTE;
     }
 
     public int getX() {
@@ -47,27 +47,27 @@ public class Submarino {
         this.z = z;
     }
 
-    public String getDirecao() {
+    public Direcao getDirecao() {
         return direcao;
     }
 
-    public void setDirecao(String direcao) {
+    public void setDirecao(Direcao direcao) {
         this.direcao = direcao;
     }
 
     public void left() {
         switch (direcao) {
             case NORTE:
-                direcao = Submarino.OESTE;
+                direcao = Direcao.OESTE;
                 break;
             case SUL:
-                direcao = Submarino.LESTE;
+                direcao = Direcao.LESTE;
                 break;
             case LESTE:
-                direcao = Submarino.NORTE;
+                direcao = Direcao.NORTE;
                 break;
             case OESTE:
-                direcao = Submarino.SUL;
+                direcao = Direcao.SUL;
                 break;
             default:
         }
@@ -76,16 +76,16 @@ public class Submarino {
     public void right() {
         switch (direcao) {
             case NORTE:
-                direcao = Submarino.LESTE;
+                direcao = Direcao.LESTE;
                 break;
             case SUL:
-                direcao = Submarino.OESTE;
+                direcao = Direcao.OESTE;
                 break;
             case LESTE:
-                direcao = Submarino.SUL;
+                direcao = Direcao.SUL;
                 break;
             case OESTE:
-                direcao = Submarino.NORTE;
+                direcao = Direcao.NORTE;
                 break;
             default:
         }
