@@ -1,7 +1,7 @@
 package vfm;
 
 import com.sun.media.sound.InvalidDataException;
-import controller.Navegador;
+import vfm.controller.Navegador;
 import java.util.Scanner;
 import vfm.model.Submarino;
 

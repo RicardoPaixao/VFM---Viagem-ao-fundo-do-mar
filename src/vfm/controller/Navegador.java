@@ -1,7 +1,7 @@
 /*
  * Regras de negociod e navegação apenas aqui
  */
-package controller;
+package vfm.controller;
 
 import vfm.model.Submarino;
 
